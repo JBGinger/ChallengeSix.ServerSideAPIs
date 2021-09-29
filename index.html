@@ -2,10 +2,98 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Weather Dashboard</title>
   </head>
-
   <body>
+    <header class="py-5 text-center">
+      <h1>Weather Dashboard</h1>
+    </header>
+
+    <div class="row sidebar-sticky p-3">
+      <ul class="nav flex-column">
+        <li class="nav-item p-2">
+          <h2>Search For a City</h2>
+        </li>
+        <li class="nav-item p-2">
+        <input type="text" placeholder="Enter a city here!">
+        </li>
+        <li class="nav-item p-2">
+        <button class="btn btn-info">Search</button>
+        </li>
+      </ul>
+    </div>
+    <main class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <div id="currentCityInfo" class="col-md-9 ml-sm-auto col-lg-10 px-4 border border-secondary rounded">
+          <h2 id="currentCityAndDate" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">Placeholder</h2>
+            <ul class="list-responsive justify-content-between">
+              <li id="currentCityTemp">Temp:</li>
+              <li id="currentCityWind">Wind:</li>
+              <li id="currentCityHumidity">Humidity:</li>
+              <li id="currentCityUV">UV Index:</li>
+            </ul>
+        </div>
+
+        <div class="row" id="Forecastcards">
+          <h2>5-Day Forecast</h2>
+          <div class="col card mb-4 rounded-3 shadow-sm">
+            <div class="card-body">
+              <ul>
+                <li>Date</li>
+                <li>Temperature</li>
+                <li>Wind</li>
+                <li>Humidity</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col card mb-4 rounded-3 shadow-sm">
+            <div class="card-body">
+              <ul>
+                <li>Date</li>
+                <li>Temperature</li>
+                <li>Wind</li>
+                <li>Humidity</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col card mb-4 rounded-3 shadow-sm">
+            <div class="card-body">
+              <ul>
+                <li>Date</li>
+                <li>Temperature</li>
+                <li>Wind</li>
+                <li>Humidity</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col card mb-4 rounded-3 shadow-sm">
+            <div class="card-body">
+              <ul>
+                <li>Date</li>
+                <li>Temperature</li>
+                <li>Wind</li>
+                <li>Humidity</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col card mb-4 rounded-3 shadow-sm">
+            <div class="card-body">
+              <ul>
+                <li>Date</li>
+                <li>Temperature</li>
+                <li>Wind</li>
+                <li>Humidity</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+    </main>
   </body>
 </html>
