@@ -11,8 +11,8 @@
     <header class="py-5 text-center">
       <h1>Weather Dashboard</h1>
     </header>
-
-    <div class="row sidebar-sticky p-3">
+  <div class="row">
+    <div class="sidebar-sticky col-md-1 p-3">
       <ul class="nav flex-column">
         <li class="nav-item p-2">
           <h2>Search For a City</h2>
@@ -25,75 +25,75 @@
         </li>
       </ul>
     </div>
-    <main class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div id="currentCityInfo" class="col-md-9 ml-sm-auto col-lg-10 px-4 border border-secondary rounded">
-          <h2 id="currentCityAndDate" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">Placeholder</h2>
+    <main class="col-md-3 ml-sm-auto col-lg-10 px-4">
+        <div id="CityInfo" class="col-md-9 ml-sm-auto col-lg-10 px-4 border border-secondary rounded">
+          <h2 id="CityAndDate" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">Placeholder</h2>
             <ul class="list-responsive justify-content-between">
-              <li id="currentCityTemp">Temp:</li>
-              <li id="currentCityWind">Wind:</li>
-              <li id="currentCityHumidity">Humidity:</li>
-              <li id="currentCityUV">UV Index:</li>
+              <li id="todaysTemp">Temp:</li>
+              <li id="todaysWind">Wind:</li>
+              <li id="todaysHumidity">Humidity:</li>
+              <li id="todaysUV">UV Index:</li>
             </ul>
         </div>
-
+        <h2>5-Day Forecast</h2>
         <div class="row" id="Forecastcards">
-          <h2>5-Day Forecast</h2>
           <div class="col card mb-4 rounded-3 shadow-sm">
             <div class="card-body">
-              <ul>
-                <li>Date</li>
-                <li>Temperature</li>
-                <li>Wind</li>
-                <li>Humidity</li>
+              <ul id="dayOneInfo">
+                <li id="dayOneDate">Date</li>
+                <li id="dayOneTemp">Temperature</li>
+                <li id="dayOneWind">Wind</li>
+                <li id="dayOneHumidity">Humidity</li>
               </ul>
             </div>
           </div>
 
           <div class="col card mb-4 rounded-3 shadow-sm">
             <div class="card-body">
-              <ul>
-                <li>Date</li>
-                <li>Temperature</li>
-                <li>Wind</li>
-                <li>Humidity</li>
+              <ul id="dayTwoInfo">
+                <li id="dayTwoDate">Date</li>
+                <li id="dayTwoTemp">Temperature</li>
+                <li id="dayTwoWind">Wind</li>
+                <li id="dayTwoHumidity">Humidity</li>
               </ul>
             </div>
           </div>
 
           <div class="col card mb-4 rounded-3 shadow-sm">
             <div class="card-body">
-              <ul>
-                <li>Date</li>
-                <li>Temperature</li>
-                <li>Wind</li>
-                <li>Humidity</li>
+              <ul id="dayThreeInfo">
+                <li id="dayThreeDate">Date</li>
+                <li id="dayThreeTemp">Temperature</li>
+                <li id="dayThreeWind">Wind</li>
+                <li id="dayThreeHumidity">Humidity</li>
               </ul>
             </div>
           </div>
 
           <div class="col card mb-4 rounded-3 shadow-sm">
             <div class="card-body">
-              <ul>
-                <li>Date</li>
-                <li>Temperature</li>
-                <li>Wind</li>
-                <li>Humidity</li>
+              <ul id="dayFourInfo">
+                <li id="dayFourDate">Date</li>
+                <li id="dayFourTemp">Temperature</li>
+                <li id="dayFourWind">Wind</li>
+                <li id="dayFourHumidity">Humidity</li>
               </ul>
             </div>
           </div>
 
           <div class="col card mb-4 rounded-3 shadow-sm">
             <div class="card-body">
-              <ul>
-                <li>Date</li>
-                <li>Temperature</li>
-                <li>Wind</li>
-                <li>Humidity</li>
+              <ul id="dayFiveInfo">
+                <li id="dayFiveDate">Date</li>
+                <li id="dayFiveTemp">Temperature</li>
+                <li id="dayFiveWind">Wind</li>
+                <li id="dayFiveHumidity">Humidity</li>
               </ul>
             </div>
           </div>
 
         </div>
     </main>
+  </div>
   </body>
 </html>
