@@ -2,6 +2,7 @@ var curDate = new Date();
 var nextDate = new Date();
 
 function CurrentWeatherData(data) {
+    $("#CurIcon").text(data.current.weather.icon);
     $("#CurTemp").text(KelvinToFahrenheit(data.current.temp) + "°");
     $("#CurWind").text(data.current.wind_speed) + "Mph";
     $("#CurHum").text(data.current.humidity) + "%";
@@ -13,6 +14,8 @@ function DisplayWeatherData(data) {
         nextDate.setDate(curDate.getDate() + (i + 1));
         var formattedDate = DateAsMMDDYY(nextDate);
         $("#Day" + (i + 1) + "Date").text(formattedDate);
+        var icon = data.daily[i].weather.icon;
+        $("Icon" + (i + 1)).text(icon);
         var temp = KelvinToFahrenheit(data.daily[i].temp.max);
         $("#Temp" + (i + 1)).text(temp + "°");
         var wind = data.daily[i].wind_speed;
@@ -40,20 +43,16 @@ function FetchWeatherData() {
         .then(function (weatherData) {
             return weatherData.json()
         })
-        .then(function (weatherData) {
+        .then(async function (weatherData) {
             console.log(weatherData);
             var latitude = "?lat=" + weatherData.coord.lat;
             var longitude = "&lon=" + weatherData.coord.lon;
             $("#CurCityAndDate").text(weatherData.name + " " + DateAsMMDDYY(curDate));
-            return fetch(apiURL + latitude + longitude + "&exclude=minutely,hourly&appid=d744ae3712d48098b8817bc0db636ae4")
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (response) {
-                    console.log(response);
-                    CurrentWeatherData(response);
-                    DisplayWeatherData(response);
-                })
+            const response = await fetch(apiURL + latitude + longitude + "&exclude=minutely,hourly&appid=d744ae3712d48098b8817bc0db636ae4");
+            const response_1 = await response.json();
+            console.log(response_1);
+            CurrentWeatherData(response_1);
+            DisplayWeatherData(response_1);
         })
 }
 
